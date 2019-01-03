@@ -85,7 +85,15 @@ export class StyleBuilder {
         }
         return this.has('color') ? `color:${this.get('color')};` : '';
     }
-    
+
+    backgroundColor(val) {
+	if (val) {
+		this.set('background-color');
+		return this;
+	}
+	
+	return this.has('background-color') ? `background-color:${this.get('backgroundColor')};` : '';
+    }
     
     radius(val) {
         if (val) {

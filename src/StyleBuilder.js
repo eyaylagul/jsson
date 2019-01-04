@@ -1,4 +1,5 @@
 export class StyleBuilder {
+    
     constructor(settings, unitType = 'px') {
         this.settings = (typeof settings === 'object') ? settings : {};
         this.unitType = unitType;
@@ -23,6 +24,81 @@ export class StyleBuilder {
             return this;
         }
         return this.unitType;
+    }
+    
+    position(val) {
+        if (val) {
+            this.set('position', val);
+            return this;
+        }
+        
+        return this.has('position') ? `position:${this.get('position')};` : '';
+    }
+    
+    height(val) {
+        if (val) {
+            this.set('height', val);
+            return this;
+        }
+        
+        return this.has('height') ? `height:${this.get('height')}${this.unit()};` : '';
+    }
+    
+    
+    width(val) {
+        if (val) {
+            this.set('width', val);
+            return this;
+        }
+        
+        return this.has('width') ? `width:${this.get('width')}${this.unit()};` : '';
+    }
+    
+    zIndex(val) {
+        if (val) {
+            this.set('zIndex', val);
+            return this;
+        }
+        
+        return this.has('zIndex') ? `z-index: ${this.get('zIndex')};` : '';
+    }
+    
+    left(val) {
+        if (val) {
+            this.set('left', val);
+            return this;
+        }
+        
+        return this.has('left') ? `left:${this.get('left')}${this.unit()};` : '';
+    }
+    
+    // left alias
+    x(val) {
+        return this.left(val);
+    }
+    
+    
+    top(val) {
+        if (val) {
+            this.set('top', val);
+            return this;
+        }
+        
+        return this.has('top') ? `top:${this.get('top')}${this.unit()};` : '';
+    }
+    
+    // top alias
+    y(val) {
+        return this.top(val);
+    }
+    
+    rotate(val) {
+        if (val) {
+            this.set('rotate', val);
+            return this;
+        }
+        
+        return this.has('rotate') ? `transform:rotate(${this.get('rotate')}deg);` : '';
     }
     
     
@@ -85,14 +161,14 @@ export class StyleBuilder {
         }
         return this.has('color') ? `color:${this.get('color')};` : '';
     }
-
+    
     backgroundColor(val) {
-	if (val) {
-		this.set('background-color');
-		return this;
-	}
-	
-	return this.has('background-color') ? `background-color:${this.get('backgroundColor')};` : '';
+        if (val) {
+            this.set('background-color');
+            return this;
+        }
+        
+        return this.has('background-color') ? `background-color:${this.get('backgroundColor')};` : '';
     }
     
     radius(val) {
@@ -104,6 +180,6 @@ export class StyleBuilder {
     }
     
     render() {
-        return `${this.textAlign()}${this.textTransform()}${this.fontWeight()}${this.fontStyle()}${this.fontSize()}${this.fontFamily()}${this.color()}${this.radius()}`;
+        return `${this.position()}${this.height()}${this.width()}${this.backgroundColor()}${this.left()}${this.top()}${this.rotate()}${this.zIndex()}${this.textAlign()}${this.textTransform()}${this.fontWeight()}${this.fontStyle()}${this.fontSize()}${this.fontFamily()}${this.color()}${this.radius()}`;
     }
 }

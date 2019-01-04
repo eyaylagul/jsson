@@ -1,4 +1,4 @@
-export class StyleBuilder {
+export default class StyleBuilder {
     
     constructor(settings, unitType = 'px') {
         this.settings = (typeof settings === 'object') ? settings : {};

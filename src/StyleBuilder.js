@@ -69,7 +69,7 @@ export default class StyleBuilder {
             return this;
         }
         
-        return this.has('left') ? `left:${this.get('left')}${this.unit()};` : '';
+        return (this.has('left') || this.has('x')) ? `left:${this.get('left') || this.get('x')}${this.unit()};` : '';
     }
     
     // left alias
@@ -84,7 +84,7 @@ export default class StyleBuilder {
             return this;
         }
         
-        return this.has('top') ? `top:${this.get('top')}${this.unit()};` : '';
+        return (this.has('top') || this.has('y')) ? `top:${this.get('top') || this.get('y')}${this.unit()};` : '';
     }
     
     // top alias

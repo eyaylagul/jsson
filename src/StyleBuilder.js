@@ -26,6 +26,14 @@ export default class StyleBuilder {
         return this.unitType;
     }
     
+    display(val) {
+        if(val) {
+            this.set('display', val);
+            return this;
+        }
+        return this.has('display') ? `display:${this.get('display')};` : '';
+    }
+    
     position(val) {
         if (val) {
             this.set('position', val);
@@ -180,6 +188,6 @@ export default class StyleBuilder {
     }
     
     render() {
-        return `${this.position()}${this.height()}${this.width()}${this.backgroundColor()}${this.left()}${this.top()}${this.rotate()}${this.zIndex()}${this.textAlign()}${this.textTransform()}${this.fontWeight()}${this.fontStyle()}${this.fontSize()}${this.fontFamily()}${this.color()}${this.radius()}`;
+        return `${this.display()}${this.position()}${this.height()}${this.width()}${this.backgroundColor()}${this.left()}${this.top()}${this.rotate()}${this.zIndex()}${this.textAlign()}${this.textTransform()}${this.fontWeight()}${this.fontStyle()}${this.fontSize()}${this.fontFamily()}${this.color()}${this.radius()}`;
     }
 }

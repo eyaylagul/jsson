@@ -176,7 +176,7 @@ export default class StyleBuilder {
             return this;
         }
         
-        return this.has('background-color') ? `background-color:${this.get('backgroundColor')};` : '';
+        return this.has('backgroundColor') ? `background-color:${this.get('backgroundColor')};` : '';
     }
     
     radius(val) {

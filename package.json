@@ -22,9 +22,9 @@
   "author": "Emre Yaylagul",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/eyaylagul/transform-json-to-inline-css/issues"
+    "url": "https://github.com/eyaylagul/jsson/issues"
   },
-  "homepage": "https://github.com/eyaylagul/transform-json-to-inline-css#readme",
+  "homepage": "https://github.com/eyaylagul/jsson#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",

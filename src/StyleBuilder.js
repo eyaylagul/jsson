@@ -172,7 +172,7 @@ export default class StyleBuilder {
     
     backgroundColor(val) {
         if (val) {
-            this.set('background-color');
+            this.set('backgroundColor');
             return this;
         }
         

@@ -1,6 +1,6 @@
 {
   "name": "jsson",
-  "version": "0.0.32",
+  "version": "0.0.33",
   "description": "Tiny json(who must contain camelcase css attribute) to convert inline css ",
   "main": "./lib/StyleBuilder.js",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eyaylagul/transform-json-to-inline-css.git"
+    "url": "git+https://github.com/eyaylagul/jsson.git"
   },
   "keywords": [
     "json",

@@ -187,7 +187,16 @@ export default class StyleBuilder {
         return this.has('radius') ? `border-radius: ${this.get('radius')}${this.unit()};` : '';
     }
     
+    objectFit(val){
+        if(val) {
+            this.set('objectFit', val);
+            return this;
+        }
+        
+        return this.has('objectFit') ? `object-fit:${this.get('objectFit')};` : '';
+    }
+    
     render() {
-        return `${this.display()}${this.position()}${this.height()}${this.width()}${this.backgroundColor()}${this.left()}${this.top()}${this.rotate()}${this.zIndex()}${this.textAlign()}${this.textTransform()}${this.fontWeight()}${this.fontStyle()}${this.fontSize()}${this.fontFamily()}${this.color()}${this.radius()}`;
+        return `${this.display()}${this.position()}${this.height()}${this.width()}${this.backgroundColor()}${this.left()}${this.top()}${this.rotate()}${this.zIndex()}${this.textAlign()}${this.textTransform()}${this.fontWeight()}${this.fontStyle()}${this.fontSize()}${this.fontFamily()}${this.color()}${this.radius()}${this.objectFit()}`;
     }
 }

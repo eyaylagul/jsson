@@ -1,6 +1,6 @@
 {
   "name": "jsson",
-  "version": "0.0.35",
+  "version": "0.0.4",
   "description": "Tiny json(who must contain camelcase css attribute) to convert inline css ",
   "main": "./lib/StyleBuilder.js",
   "scripts": {
